@@ -45,6 +45,8 @@ $(function() {
     $.ajax({
       type: 'POST',
       url: API_ENDPOINT,
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
       data: {
         yoUsername      : $('#yoUsername').val(),
         productKeywords : $('#productKeywords').val(),
