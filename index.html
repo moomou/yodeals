@@ -39,7 +39,9 @@ $(function() {
   'use strict';
   var API_ENDPOINT = 'https://ekho.io/yo/wish';
 
-  $('#yoBtn').click(function() {
+  $('#yoBtn').click(function(evt) {
+    evt.preventDefault();
+
     $.ajax({
       type: 'POST',
       url: API_ENDPOINT,
@@ -49,8 +51,11 @@ $(function() {
         maxPrice        : 0
       }
     })
-    .done(function() {
+    .done(function(msg) {
       $('.mini-container').hide();
+    });
+    .fail(function(err) {
+      debugger;
     });
   });
 });
