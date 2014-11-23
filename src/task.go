@@ -94,7 +94,7 @@ func scrapeBestBuy(rPool *redis.Pool, wishList []*Wish) {
 }
 
 const (
-    SCRAPE_INTERVAL = 60 * time.Second
+    SCRAPE_INTERVAL = 30 * time.Second
 )
 
 var (
